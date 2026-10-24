@@ -23,7 +23,7 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 .wrap {
-  max-width: 860px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px 60px;
 }
@@ -110,7 +110,7 @@ h3.sub {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
 }
 
@@ -185,4 +185,20 @@ iframe {
 
 .card .meta {
   margin-bottom: 8px;
+}
+
+/* Description beside video */
+.media-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.media-row .desc { margin: 0; }
+.media-row video { max-width: 320px; max-height: 80vh; object-fit: contain; }
+
+@media (max-width: 800px) {
+  .media-row { grid-template-columns: 1fr; }
+  .media-row video { margin: 0 auto; }
 }
