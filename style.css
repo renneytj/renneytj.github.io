@@ -202,3 +202,13 @@ iframe {
   .media-row { grid-template-columns: 1fr; }
   .media-row video { margin: 0 auto; }
 }
+
+/* YouTube embeds in cards */
+.card iframe.yt {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  margin: 0 0 14px;
+  border-radius: 8px;
+  background: #000;
+}
